@@ -33,8 +33,8 @@ class Pipeline:
         self, user_message: str, model_id: str, messages: List[dict], body: dict
     ) -> Union[str, Generator, Iterator]:
         llm = Ollama(
-            base_url='http://localhost:11434',
-            headers={'Authorization': "Bearer sk-8c47068f09d24946ada198b5e86e7435"},
+            base_url='https://gpt.ada.asia/ollama',
+            headers={'Authorization': "Bearer sk-08ea5fd0508b4bc9b3a718f40b905994"},
             model='llama3:8b',
         )
 
