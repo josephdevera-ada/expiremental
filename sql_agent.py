@@ -47,11 +47,9 @@ class Pipeline:
             llm=llm,
             db=db,
             agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+            handle_parsing_errors=True,
         )
 
-        try:
-            response = agent_executor.invoke(user_message)
-        except:
-            response = 'Something went wrong'
-
+        response = agent_executor.invoke(user_message)
+        
         return response
