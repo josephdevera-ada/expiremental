@@ -52,4 +52,4 @@ class Pipeline:
 
         response = agent_executor.invoke(user_message)
         
-        return response
+        return response['output']
